@@ -1,0 +1,7 @@
+channels:
+  - bioconda
+  - defaults
+  - conda-forge
+dependencies:
+  - sra-tools =2.10.8
+  - ossuuid =1.6.2

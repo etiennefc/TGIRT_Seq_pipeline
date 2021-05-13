@@ -1,0 +1,42 @@
+{
+  "dataset":
+  {
+    "Breast_1": "SRX5395643",
+    "Breast_2": "SRX5395644",
+    "Breast_3": "SRX9318421",
+    "Ovary_1": "SRX5395641",
+    "Ovary_2": "SRX5395642",
+    "Ovary_3": "SRX5395640",
+    "Prostate_1": "SRX5395645",
+    "Prostate_2": "SRX5395646",
+    "Prostate_3": "SRX5395647",
+    "Testis_1": "SRX9107955",
+    "Testis_2": "SRX9107956",
+    "Testis_3": "SRX9107957",
+    "Skeletal_muscle_1": "SRX9107958",
+    "Skeletal_muscle_2": "SRX9107959",
+    "Skeletal_muscle_3": "SRX9107960",
+    "Liver_1": "SRX9107961",
+    "Liver_2": "SRX9107962",
+    "Liver_3": "SRX9107963",
+    "Brain_1": "SRX9107964",
+    "Brain_2": "SRX9107965",
+    "Brain_3": "SRX9107966"
+  },
+  "path":
+  {
+    "fastq": "data/references/fastq/",
+    "reference_genome": "data/references/human_genome_ensembl_87.fa",
+    "standard_annotation": "data/references/human_ensembl_87_wo_dup_v2.BB_v3.gtf",
+    "reference_annotation": "data/references/human_ensembl_87_wo_dup_v2.BB_v3.correct_annotation.gtf",
+    "reference_intron_annotation": "data/references/human_ensembl_87_wo_dup_v2.BB_v3.correct_annotation.introns.gtf",
+    "coco_git_link": "http://gitlabscottgroup.med.usherbrooke.ca/scott-group/coco.git"
+  },
+  "download":
+  {
+    "genome": "ftp://ftp.ensembl.org/pub/release-87/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz",
+    "std_annotation": "https://zenodo.org/record/4031652/files/human_ensembl_87_wo_dup_v3.BB_v3.gtf",
+    "annotation": "https://zenodo.org/record/3981426/files/human_ensembl_87_wo_dup_v2.BB_v3.correct_annotation.gtf",
+    "intron_annotation": "https://zenodo.org/record/4002130/files/human_ensembl_87_wo_dup_v2.BB_v3.correct_annotation.introns.gtf"
+  }
+}

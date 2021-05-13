@@ -1,0 +1,48 @@
+{
+    "__default__":
+    {
+        "job-name": "SM.{rule}",
+        "nodes": "1",
+        "cpus-per-task": "1",
+        "mem": "4G",
+        "time": "0-2:30:00",
+        "mail-user": "etienne.fafard-couture@usherbrooke.ca",
+        "mail-type": "FAIL"
+    },
+    "trimming":
+    {
+        "cpus-per-task": "4",
+	    "mem": "16G",
+        "time": "0-4:00:00"
+    },
+    "qc_before_trim":
+    {
+        "cpus-per-task": "16",
+	    "mem": "32G",
+        "time": "0-3:00:00"
+    },
+    "qc_after_trim":
+    {
+        "cpus-per-task": "16",
+	    "mem": "32G",
+        "time": "0-3:00:00"
+    },
+    "star_index":
+    {
+        "cpus-per-task": "32",
+        "mem": "128G",
+        "time": "0-6:00:00"
+    },
+    "star_align":
+    {
+        "cpus-per-task": "32",
+        "mem": "128G",
+        "time": "0-3:00:00"
+    },
+    "coco_cc":
+    {
+        "cpus-per-task": "32",
+        "mem": "128G",
+        "time": "0-6:00:00"
+    }
+}

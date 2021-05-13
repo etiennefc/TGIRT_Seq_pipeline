@@ -1,0 +1,10 @@
+channels:
+  - defaults
+  - bioconda
+dependencies:
+  - bedtools =2.29.0
+  - numpy =1.17.2
+  - pandas =0.24.2
+  - samtools =1.9
+  - subread =1.6.4
+ 
