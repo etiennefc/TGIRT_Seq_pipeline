@@ -30,7 +30,7 @@
     "standard_annotation": "data/references/human_ensembl_87_wo_dup_v2.BB_v3.gtf",
     "reference_annotation": "data/references/human_ensembl_87_wo_dup_v2.BB_v3.correct_annotation.gtf",
     "reference_intron_annotation": "data/references/human_ensembl_87_wo_dup_v2.BB_v3.correct_annotation.introns.gtf",
-    "coco_git_link": "http://gitlabscottgroup.med.usherbrooke.ca/scott-group/coco.git"
+    "coco_git_link": "https://github.com/scottgroup/coco.git"
   },
   "download":
   {
