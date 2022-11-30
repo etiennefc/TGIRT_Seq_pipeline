@@ -1,0 +1,29 @@
+import os
+from pathlib import Path
+
+configfile: "../config/config.json"
+
+original_id = list(config['dataset_homo_sapiens'].values())
+simple_id = list(config['dataset_homo_sapiens'].keys()) 
+
+include: "rules/common.smk"
+include: "rules/download_all.smk"
+include: "rules/tgirt_seq.smk"
+
+rule all:
+    input:
+        #renamed_fastq = expand("data/references/fastq/{id}_R{pair}.fastq.gz", id=simple_id, pair=[1, 2])
+        qc_before_trim = get_fastqc_output(config['species'], 'before_trim'),
+        qc_after_trim = get_fastqc_output(config['species'], 'after_trim'),
+        coco_cc = expand("results/coco_cc/{species}_merged_tpm.tsv", **config),
+        coco_cb = get_coco_output(config['species'], 'coco_cb')
+
+rule all_downloads:
+    input:
+        #samples = expand('data/references/fastq/{id}_{pair}.fastq.gz',
+        #    id=original_id, pair=[1, 2]),
+        genomes = expand('data/references/genome_fa/{species}_genome.fa', **config),
+        gtfs = expand('data/references/gtf/{species}.gtf', **config),
+        coco_dependency_download = "scripts/pairedBamToBed12/",
+        coco_git = 'git_repos/coco'
+

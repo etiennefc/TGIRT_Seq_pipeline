@@ -34,7 +34,7 @@ To create the Snakemake environment used to launch Snakemake, run the following.
 ```bash
 exec bash
 conda config --set auto_activate_base False
-conda create --name smake -c bioconda -c conda-forge snakemake=5.4.5
+conda create --name smake -c bioconda -c conda-forge snakemake=7.18
 ```
 
 Before running Snakemake, you have to initialize the environment
@@ -43,23 +43,22 @@ conda activate smake
 ```
 
 
-If working on a cluster, either go for a local installation, or check if it is not already installed on your system.
-
-
 ## Run
-To run the workflow locally simply run the following command in the Snakemake conda environment, where `$CORES` is the number of available cores.
+
+If the cluster nodes do not have internet access, run firstly the tasks requiring the internet locally (i.e all downloads) from the workflow directory with :
 ```bash
-snakemake --use-conda --cores=$CORES
+snakemake all_downloads --profile ../profile_local/
 ```
 
-To run on a Slurm cluster, one can use the following command to output all tasks at once. Don't forget to change mail-user address for your own email address in cluster.json.
+
+To run the workflow locally simply run the following command in the Snakemake conda environment from the workflow directory.
 ```bash
-snakemake -j 999 --use-conda --immediate-submit --notemp --cluster-config cluster.json --cluster 'python3 slurmSubmit.py {dependencies}'
+snakemake --profile ../profile_local/
 ```
 
-If the cluster nodes do not have internet access, one can run the tasks requiring the internet locally (before running the precedent command) with :
+To run on a Slurm cluster, one can use the following command to run (queue) all tasks at once from the workflow directory. Don't forget to change mail-user address for your own email address in cluster.yaml (in the profile_slurm directory).
 ```bash
-snakemake all_downloads --use-conda --cores=$CORES
+snakemake --profile ../profile_slurm/
 ```
 
 To look at your entire workflow in svg, use the following commands (combined or separate conditions respectively):

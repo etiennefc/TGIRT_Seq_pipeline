@@ -1,0 +1,15 @@
+.snakemake/
+workflow/.snakemake/
+workflow/Log.out
+workflow/data/FastQC/
+workflow/data/Trimmomatic/trimmed_reads/
+workflow/data/references/fastq/
+workflow/data/references/genome_fa/
+workflow/data/references/gtf/
+workflow/data/star_index/
+workflow/git_repos/
+workflow/logs/
+workflow/results/
+workflow/scripts/pairedBamToBed12/
+workflow/slurm-*.out
+
